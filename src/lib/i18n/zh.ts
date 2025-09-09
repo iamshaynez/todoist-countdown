@@ -2,8 +2,8 @@ import { Translations } from '../../types/i18n';
 
 export const zh: Translations = {
   // Common
-  appTitle: 'Todoist 倒计时',
-  appSubtitle: '跟踪您的任务截止日期',
+  appTitle: 'Todoist 重要日',
+  appSubtitle: '重要的日子不只是一个截止日',
   loading: '加载中...',
   error: '错误',
   refresh: '刷新',

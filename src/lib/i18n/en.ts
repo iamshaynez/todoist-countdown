@@ -2,8 +2,8 @@ import { Translations } from '../../types/i18n';
 
 export const en: Translations = {
   // Common
-  appTitle: 'Todoist Countdown',
-  appSubtitle: 'Track your task deadlines',
+  appTitle: 'Todoist Important Days',
+  appSubtitle: 'Important Days are not just a due date',
   loading: 'Loading...',
   error: 'Error',
   refresh: 'Refresh',
