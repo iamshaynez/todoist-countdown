@@ -35,7 +35,9 @@ export const zh: Translations = {
   // Countdown card
   daysLeft: '天剩余',
   dayLeft: '天剩余',
-  daysRemaining: '剩余天数',
+  daysRemaining: '天',
+  countdownTitle: '距离',
+  countdownSuffix: '还有',
   overdue: '已过期',
   on: '于',
   targetDate: '目标日期',

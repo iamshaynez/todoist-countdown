@@ -37,6 +37,8 @@ export interface Translations {
   daysLeft: string;
   dayLeft: string;
   daysRemaining: string;
+  countdownTitle: string;
+  countdownSuffix?: string;
   overdue: string;
   on: string;
   targetDate: string;

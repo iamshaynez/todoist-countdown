@@ -35,7 +35,9 @@ export const en: Translations = {
   // Countdown card
   daysLeft: 'days left',
   dayLeft: 'day left',
-  daysRemaining: 'Days Remaining',
+  daysRemaining: 'Days',
+  countdownTitle: 'Days until: ',
+  countdownSuffix: ' ',
   overdue: 'overdue',
   on: 'on',
   targetDate: 'Target Date',

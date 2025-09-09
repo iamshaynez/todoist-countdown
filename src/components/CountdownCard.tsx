@@ -33,7 +33,7 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ title, targetDate,
       {/* Blue header with title - full width, fixed height */}
       <div className="bg-blue-500 text-white px-4 py-3 h-16 flex items-center justify-center">
         <div className="text-sm font-medium text-center leading-tight">
-          {title}
+          {t('countdownTitle')}{title}{t('countdownSuffix')}
         </div>
       </div>
 
@@ -43,9 +43,6 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ title, targetDate,
         <div className="text-center mb-6">
           <div className="text-6xl font-bold text-black mb-2">
             {isExpired ? '0' : Math.abs(daysRemaining)}
-          </div>
-          <div className="text-lg font-medium text-black">
-            {t('daysRemaining')}
           </div>
         </div>
       </div>
