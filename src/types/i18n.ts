@@ -12,6 +12,8 @@ export interface Translations {
   save: string;
   cancel: string;
   settings: string;
+  edit: string;
+  delete: string;
   
   // Welcome state
   welcomeTitle: string;
@@ -34,8 +36,11 @@ export interface Translations {
   // Countdown card
   daysLeft: string;
   dayLeft: string;
+  daysRemaining: string;
   overdue: string;
   on: string;
+  targetDate: string;
+  expired: string;
   
   // Error messages
   apiKeyRequired: string;

@@ -11,6 +11,8 @@ export const en: Translations = {
   save: 'Save',
   cancel: 'Cancel',
   settings: 'Settings',
+  edit: 'Edit',
+  delete: 'Delete',
   
   // Welcome state
   welcomeTitle: 'Welcome to Todoist Countdown',
@@ -33,8 +35,11 @@ export const en: Translations = {
   // Countdown card
   daysLeft: 'days left',
   dayLeft: 'day left',
+  daysRemaining: 'Days Remaining',
   overdue: 'overdue',
   on: 'on',
+  targetDate: 'Target Date',
+  expired: 'Expired',
   
   // Error messages
   apiKeyRequired: 'API key is required',

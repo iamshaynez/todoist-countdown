@@ -11,6 +11,8 @@ export const zh: Translations = {
   save: '保存',
   cancel: '取消',
   settings: '设置',
+  edit: '编辑',
+  delete: '删除',
   
   // Welcome state
   welcomeTitle: '欢迎使用 Todoist 倒计时',
@@ -31,10 +33,13 @@ export const zh: Translations = {
   languageLabel: '语言',
   
   // Countdown card
-  daysLeft: '天后到期',
-  dayLeft: '天后到期',
+  daysLeft: '天剩余',
+  dayLeft: '天剩余',
+  daysRemaining: '剩余天数',
   overdue: '已过期',
   on: '于',
+  targetDate: '目标日期',
+  expired: '已过期',
   
   // Error messages
   apiKeyRequired: '需要 API 密钥',
