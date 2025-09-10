@@ -35,46 +35,7 @@
 - **Interactive Cards**: Hover effects and smooth animations
 - **Usage Guide**: Built-in help modal with detailed instructions
 
-### 🛠️ Technology Stack
-
-- **Frontend Framework**: React 18 with TypeScript
-- **Build Tool**: Vite 6
-- **Styling**: Tailwind CSS 3
-- **State Management**: Zustand
-- **Routing**: React Router DOM 7
-- **Icons**: Lucide React
-- **Development**: ESLint, TypeScript ESLint
-
-### 🚀 Quick Start
-
-#### Prerequisites
-- Node.js 18+ 
-- npm, pnpm, or yarn
-- Todoist account with API access
-
-#### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/todoist-countdown.git
-cd todoist-countdown
-
-# Install dependencies
-npm install
-# or
-pnpm install
-# or
-yarn install
-
-# Start development server
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
-
-#### Configuration
+### 🚀 Getting Started
 
 1. **Get Todoist API Key**:
    - Go to [Todoist Settings > Integrations](https://todoist.com/prefs/integrations)
@@ -121,30 +82,7 @@ Description: 2024-01-01 Started my fitness journey...
 - **Responsive Design**: Optimized viewing experience across all devices
 - **Error Handling**: Graceful error messages and recovery options
 
-### 🔧 Available Scripts
 
-```bash
-# Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-npm run check        # Type check without emitting
-```
-
-### 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ---
 
@@ -179,46 +117,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 - **交互式卡片**：悬停效果和流畅动画
 - **使用指南**：内置帮助模态框，提供详细说明
 
-### 🛠️ 技术栈
-
-- **前端框架**：React 18 + TypeScript
-- **构建工具**：Vite 6
-- **样式框架**：Tailwind CSS 3
-- **状态管理**：Zustand
-- **路由管理**：React Router DOM 7
-- **图标库**：Lucide React
-- **开发工具**：ESLint, TypeScript ESLint
-
-### 🚀 快速开始
-
-#### 环境要求
-- Node.js 18+
-- npm、pnpm 或 yarn
-- 具有 API 访问权限的 Todoist 账户
-
-#### 安装步骤
-
-```bash
-# 克隆仓库
-git clone https://github.com/yourusername/todoist-countdown.git
-cd todoist-countdown
-
-# 安装依赖
-npm install
-# 或
-pnpm install
-# 或
-yarn install
-
-# 启动开发服务器
-npm run dev
-# 或
-pnpm dev
-# 或
-yarn dev
-```
-
-#### 配置说明
+### 🚀 开始使用
 
 1. **获取 Todoist API 密钥**：
    - 访问 [Todoist 设置 > 集成](https://todoist.com/prefs/integrations)
@@ -265,30 +164,7 @@ yarn dev
 - **响应式设计**：在所有设备上优化的查看体验
 - **错误处理**：优雅的错误消息和恢复选项
 
-### 🔧 可用脚本
 
-```bash
-# 开发
-npm run dev          # 启动开发服务器
-npm run build        # 构建生产版本
-npm run preview      # 预览生产构建
-npm run lint         # 运行 ESLint
-npm run check        # 类型检查（不输出文件）
-```
-
-### 📝 许可证
-
-本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
-
-### 🤝 贡献
-
-欢迎贡献！请随时提交 Pull Request。对于重大更改，请先开启 issue 讨论您想要更改的内容。
-
-1. Fork 仓库
-2. 创建您的功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
 
 ---
 
@@ -297,12 +173,9 @@ npm run check        # 类型检查（不输出文件）
 <!-- Add screenshots here -->
 *Screenshots will be added soon / 截图即将添加*
 
-## 🔗 Links / 链接
+## 🔗 相关链接 / Links
 
 - [Todoist API Documentation](https://developer.todoist.com/rest/v2/)
-- [React Documentation](https://react.dev/)
-- [Vite Documentation](https://vitejs.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/)
 
 ---
 
