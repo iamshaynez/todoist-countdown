@@ -36,12 +36,22 @@ export const en: Translations = {
   daysLeft: 'days left',
   dayLeft: 'day left',
   daysRemaining: 'Days',
-  countdownTitle: 'Days until: ',
-  countdownSuffix: ' ',
   overdue: 'overdue',
   on: 'on',
   targetDate: 'Target Date',
+  targetDatePrefix: 'until ',
+  targetDateSuffix: ' ',
   expired: 'Expired',
+  
+  // CountUp card
+  countupPrefix: 'since ',
+  countupSuffix: ' ',
+  
+  // Display units
+  days: 'Days',
+  d: 'd',
+  months: 'm',
+  weeks: 'w',
   
   // Error messages
   apiKeyRequired: 'API key is required',

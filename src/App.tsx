@@ -142,8 +142,7 @@ function App() {
             {cards.map((card) => (
               <CountdownCard 
                 key={card.id} 
-                title={card.title}
-                targetDate={new Date(card.dueDate)}
+                card={card}
                 onEdit={() => console.log('Edit card:', card.id)}
                 onDelete={() => console.log('Delete card:', card.id)}
               />

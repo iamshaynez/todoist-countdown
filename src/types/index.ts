@@ -2,6 +2,8 @@
 export interface TodoistTask {
   id: string;
   content: string;
+  description: string;
+  labels: string[];
   due?: {
     date: string;
     string: string;
@@ -11,6 +13,9 @@ export interface TodoistTask {
   created_at: string;
 }
 
+// Card types
+export type CardType = 'countdown' | 'countup';
+
 // Countdown card data type
 export interface CountdownCard {
   id: string;
@@ -18,6 +23,8 @@ export interface CountdownCard {
   daysLeft: number;
   dueDate: string;
   isOverdue: boolean;
+  type: CardType;
+  hasDateError?: boolean;
 }
 
 // Application configuration type

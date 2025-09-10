@@ -37,12 +37,22 @@ export interface Translations {
   daysLeft: string;
   dayLeft: string;
   daysRemaining: string;
-  countdownTitle: string;
-  countdownSuffix?: string;
   overdue: string;
   on: string;
   targetDate: string;
+  targetDatePrefix: string;
+  targetDateSuffix: string;
   expired: string;
+  
+  // CountUp card
+  countupPrefix: string;
+  countupSuffix: string;
+  
+  // Display units
+  days: string;
+  d: string;
+  months: string;
+  weeks: string;
   
   // Error messages
   apiKeyRequired: string;

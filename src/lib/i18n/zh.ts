@@ -36,12 +36,22 @@ export const zh: Translations = {
   daysLeft: '天剩余',
   dayLeft: '天剩余',
   daysRemaining: '天',
-  countdownTitle: '距离',
-  countdownSuffix: '还有',
   overdue: '已过期',
   on: '于',
   targetDate: '目标日期',
+  targetDatePrefix: '距离 ',
+  targetDateSuffix: ' 还有',
   expired: '已过期',
+  
+  // CountUp card
+  countupPrefix: '距离 ',
+  countupSuffix: ' 已经',
+  
+  // Display units
+  days: '天',
+  d: '天',
+  months: '月',
+  weeks: '周',
   
   // Error messages
   apiKeyRequired: '需要 API 密钥',
