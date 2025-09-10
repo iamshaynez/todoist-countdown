@@ -50,6 +50,7 @@ export interface Translations {
   
   // Display units
   days: string;
+  day: string;
   d: string;
   months: string;
   weeks: string;
@@ -58,6 +59,16 @@ export interface Translations {
   apiKeyRequired: string;
   fetchError: string;
   saveSuccess: string;
+  
+  // Tip modal
+  tipButton: string;
+  tipTitle: string;
+  tipCountdownTitle: string;
+  tipCountdownDescription: string;
+  tipCountupTitle: string;
+  tipCountupDescription: string;
+  tipDateFormat: string;
+  tipClose: string;
 }
 
 export interface LanguageConfig {

@@ -49,6 +49,7 @@ export const zh: Translations = {
   
   // Display units
   days: '天',
+  day: '天',
   d: '天',
   months: '月',
   weeks: '周',
@@ -56,5 +57,15 @@ export const zh: Translations = {
   // Error messages
   apiKeyRequired: '需要 API 密钥',
   fetchError: '获取任务失败',
-  saveSuccess: '设置保存成功'
+  saveSuccess: '设置保存成功',
+  
+  // Tip modal
+  tipButton: '使用说明',
+  tipTitle: '使用说明',
+  tipCountdownTitle: 'CountDown 倒计时',
+  tipCountdownDescription: '在 Todoist 任务中添加 @CountDown 标签，系统会自动识别任务的截止日期并显示倒计时。适用于重要截止日期、考试时间、项目交付等场景。',
+  tipCountupTitle: 'CountUp 正计时',
+  tipCountupDescription: '在 Todoist 任务中添加 @CountUp 标签，并在任务描述的前10个字符中输入起始日期（如：2024-01-01），系统会计算从该日期到今天已经过去的天数。适用于纪念日、习惯追踪、项目进度等场景。',
+  tipDateFormat: '日期格式要求：YYYY-MM-DD（如：2024-01-01）',
+  tipClose: '关闭'
 }

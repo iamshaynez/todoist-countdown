@@ -49,6 +49,7 @@ export const en: Translations = {
   
   // Display units
   days: 'Days',
+  day: 'Day',
   d: 'd',
   months: 'm',
   weeks: 'w',
@@ -56,5 +57,15 @@ export const en: Translations = {
   // Error messages
   apiKeyRequired: 'API key is required',
   fetchError: 'Failed to fetch tasks',
-  saveSuccess: 'Settings saved successfully'
+  saveSuccess: 'Settings saved successfully',
+  
+  // Tip modal
+  tipButton: 'Usage Guide',
+  tipTitle: 'Usage Guide',
+  tipCountdownTitle: 'CountDown Timer',
+  tipCountdownDescription: 'Add @CountDown tag to your Todoist tasks. The system will automatically recognize the task due date and display a countdown timer. Perfect for important deadlines, exam dates, project deliveries, etc.',
+  tipCountupTitle: 'CountUp Timer',
+  tipCountupDescription: 'Add @CountUp tag to your Todoist tasks and enter the start date in the first 10 characters of the task description (e.g., 2024-01-01). The system will calculate the days elapsed from that date to today. Great for anniversaries, habit tracking, project progress, etc.',
+  tipDateFormat: 'Date format: YYYY-MM-DD (e.g., 2024-01-01)',
+  tipClose: 'Close'
 };

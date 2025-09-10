@@ -83,7 +83,7 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
     
     switch (displayMode) {
       case 'days':
-        return `${days} ${t('days')}`;
+        return `${days} ${days === 1 ? t('day') : t('days')}`;
       case 'monthsAndDays': {
         const { months, days: remainingDays } = daysToMonthsAndDays(days);
         return `${months} ${t('months')} ${remainingDays} ${t('d')}`;

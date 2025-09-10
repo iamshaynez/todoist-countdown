@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
-import { Settings, RefreshCw, Calendar, AlertCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Settings, RefreshCw, Calendar, AlertCircle, HelpCircle } from 'lucide-react';
 import { useAppStore } from './store/useAppStore';
 import { CountdownCard } from './components/CountdownCard';
 import { Sidebar } from './components/Sidebar';
+import { TipModal } from './components/TipModal';
 import { useLanguage } from './hooks/useLanguage';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   } = useAppStore();
   
   const { t } = useLanguage();
+  const [isTipModalOpen, setIsTipModalOpen] = useState(false);
 
   // Initialize app on mount
   useEffect(() => {
@@ -66,6 +68,16 @@ function App() {
                   <span className="hidden sm:inline">{t('refresh')}</span>
                 </button>
               )}
+
+              {/* Tip button */}
+              <button
+                onClick={() => setIsTipModalOpen(true)}
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                title={t('tipButton')}
+              >
+                <HelpCircle className="w-4 h-4" />
+                <span className="hidden sm:inline">{t('tipButton')}</span>
+              </button>
 
               {/* Settings button */}
               <button
@@ -163,6 +175,12 @@ function App() {
       <Sidebar 
         isOpen={isSidebarOpen} 
         onClose={() => setSidebarOpen(false)} 
+      />
+
+      {/* Tip Modal */}
+      <TipModal 
+        isOpen={isTipModalOpen}
+        onClose={() => setIsTipModalOpen(false)}
       />
     </div>
   );
