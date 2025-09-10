@@ -53,6 +53,8 @@ export const en: Translations = {
   d: 'd',
   months: 'm',
   weeks: 'w',
+  years: 'years',
+  y: 'y',
   
   // Error messages
   apiKeyRequired: 'API key is required',

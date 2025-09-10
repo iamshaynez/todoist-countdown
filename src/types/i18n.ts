@@ -54,6 +54,8 @@ export interface Translations {
   d: string;
   months: string;
   weeks: string;
+  years: string;
+  y: string;
   
   // Error messages
   apiKeyRequired: string;

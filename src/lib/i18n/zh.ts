@@ -53,6 +53,8 @@ export const zh: Translations = {
   d: '天',
   months: '月',
   weeks: '周',
+  years: '年',
+  y: '年',
   
   // Error messages
   apiKeyRequired: '需要 API 密钥',

@@ -3,7 +3,7 @@ import type { CountdownCard as CountdownCardData } from '../types';
 import { useLanguage } from '../hooks/useLanguage';
 
 // Display modes for the countdown number
-type DisplayMode = 'days' | 'monthsAndDays' | 'weeks';
+type DisplayMode = 'days' | 'yearsMonthsAndDays' | 'weeks';
 
 interface CountdownCardProps {
   card: CountdownCardData;
@@ -22,11 +22,13 @@ const formatDate = (date: Date, language: string): string => {
   });
 };
 
-// Convert days to months and days format
-const daysToMonthsAndDays = (totalDays: number): { months: number; days: number } => {
-  const months = Math.floor(totalDays / 30);
-  const days = totalDays % 30;
-  return { months, days };
+// Convert days to years, months and days format
+const daysToYearsMonthsAndDays = (totalDays: number): { years: number; months: number; days: number } => {
+  const years = Math.floor(totalDays / 365);
+  const remainingAfterYears = totalDays % 365;
+  const months = Math.floor(remainingAfterYears / 30);
+  const days = remainingAfterYears % 30;
+  return { years, months, days };
 };
 
 // Convert days to weeks (rounded down)
@@ -47,8 +49,8 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
     setDisplayMode(prev => {
       switch (prev) {
         case 'days':
-          return 'monthsAndDays';
-        case 'monthsAndDays':
+          return 'yearsMonthsAndDays';
+        case 'yearsMonthsAndDays':
           return 'weeks';
         case 'weeks':
           return 'days';
@@ -84,9 +86,9 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
     switch (displayMode) {
       case 'days':
         return `${days} ${days === 1 ? t('day') : t('days')}`;
-      case 'monthsAndDays': {
-        const { months, days: remainingDays } = daysToMonthsAndDays(days);
-        return `${months} ${t('months')} ${remainingDays} ${t('d')}`;
+      case 'yearsMonthsAndDays': {
+        const { years, months, days: remainingDays } = daysToYearsMonthsAndDays(days);
+        return `${years} ${t('y')} ${months} ${t('months')} ${remainingDays} ${t('d')}`;
       }
       case 'weeks': {
         const weeks = daysToWeeks(days);
@@ -95,6 +97,25 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
       default:
         return `${days} ${t('days')}`;
     }
+  };
+
+  // Get dynamic font size based on display mode and content length
+  const getFontSize = () => {
+    if (hasDateError) {
+      return 'text-2xl';
+    }
+    
+    if (displayMode === 'yearsMonthsAndDays') {
+      const days = type === 'countup' ? Math.abs(daysLeft) : (isOverdue ? 0 : Math.abs(daysLeft));
+      const { years } = daysToYearsMonthsAndDays(days);
+      
+      // If years >= 10, use smaller font size to fit in one line
+      if (years >= 10) {
+        return 'text-3xl';
+      }
+    }
+    
+    return 'text-4xl';
   };
 
   return (
@@ -114,7 +135,7 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
         <div className="text-center mb-6">
           <div 
             className={`font-bold mb-2 cursor-pointer hover:opacity-80 transition-opacity ${
-              hasDateError ? 'text-red-500 text-2xl' : 'text-black text-4xl'
+              hasDateError ? 'text-red-500 text-2xl' : `text-black ${getFontSize()}`
             }`}
             onClick={handleNumberClick}
           >
