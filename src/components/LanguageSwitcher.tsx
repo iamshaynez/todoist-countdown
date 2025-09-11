@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Languages } from 'lucide-react';
 import { Language } from '../types/i18n';
 import { languages, getLanguageConfig } from '../lib/i18n';
 import { useLanguage } from '../hooks/useLanguage';
@@ -19,7 +19,10 @@ export const LanguageSwitcher: React.FC = () => {
 
   return (
     <div className="relative">
-      <label className="block text-sm font-medium text-gray-700 mb-2">
+      <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+        <div className="relative p-1.5 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-lg">
+          <Languages className="w-4 h-4 text-indigo-600 drop-shadow-sm" />
+        </div>
         {t('languageLabel')}
       </label>
       

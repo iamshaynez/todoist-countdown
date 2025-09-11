@@ -27,6 +27,13 @@ export const zh: Translations = {
   
   // Sidebar
   sidebarTitle: '设置',
+  apiKeyTitle: 'API 配置',
+  apiInstructionsTitle: '如何获取 API 密钥',
+  apiInstructionsDesc: '请按照以下步骤获取您的 Todoist API 令牌：',
+  apiStep1: '进入 Todoist 设置（点击右上角头像）',
+  apiStep2: '导航到"集成"选项卡',
+  apiStep3: '找到"API 令牌"部分并复制您的令牌',
+  apiStep4: '将令牌粘贴到下方输入框中并保存',
   apiKeyLabel: 'API 密钥',
   apiKeyPlaceholder: '请输入您的 Todoist API 密钥',
   apiKeyDescription: '从 Todoist 设置 > 集成 中获取您的 API 密钥',

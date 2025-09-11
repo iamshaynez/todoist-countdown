@@ -27,6 +27,13 @@ export const en: Translations = {
   
   // Sidebar
   sidebarTitle: 'Settings',
+  apiKeyTitle: 'API Configuration',
+  apiInstructionsTitle: 'How to Get API Key',
+  apiInstructionsDesc: 'Follow these steps to get your Todoist API token:',
+  apiStep1: 'Go to Todoist Settings (click your avatar in the top right)',
+  apiStep2: 'Navigate to "Integrations" tab',
+  apiStep3: 'Find "API token" section and copy your token',
+  apiStep4: 'Paste the token in the field below and save',
   apiKeyLabel: 'API Key',
   apiKeyPlaceholder: 'Enter your Todoist API key',
   apiKeyDescription: 'Get your API key from Todoist Settings > Integrations',

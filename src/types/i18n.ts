@@ -28,6 +28,13 @@ export interface Translations {
   
   // Sidebar
   sidebarTitle: string;
+  apiKeyTitle: string;
+  apiInstructionsTitle: string;
+  apiInstructionsDesc: string;
+  apiStep1: string;
+  apiStep2: string;
+  apiStep3: string;
+  apiStep4: string;
   apiKeyLabel: string;
   apiKeyPlaceholder: string;
   apiKeyDescription: string;
