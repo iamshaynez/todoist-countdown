@@ -39,8 +39,25 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
+      <header className="relative sticky top-0 z-10 overflow-hidden">
+        {/* Enhanced background with gradient and glassmorphism */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-purple-50/85 backdrop-blur-xl"></div>
+        
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.3'%3E%3Ccircle cx='5' cy='5' r='0.5'/%3E%3Ccircle cx='15' cy='5' r='0.5'/%3E%3Ccircle cx='25' cy='5' r='0.5'/%3E%3Ccircle cx='35' cy='5' r='0.5'/%3E%3Ccircle cx='5' cy='15' r='0.5'/%3E%3Ccircle cx='15' cy='15' r='0.5'/%3E%3Ccircle cx='25' cy='15' r='0.5'/%3E%3Ccircle cx='35' cy='15' r='0.5'/%3E%3Ccircle cx='5' cy='25' r='0.5'/%3E%3Ccircle cx='15' cy='25' r='0.5'/%3E%3Ccircle cx='25' cy='25' r='0.5'/%3E%3Ccircle cx='35' cy='25' r='0.5'/%3E%3Ccircle cx='5' cy='35' r='0.5'/%3E%3Ccircle cx='15' cy='35' r='0.5'/%3E%3Ccircle cx='25' cy='35' r='0.5'/%3E%3Ccircle cx='35' cy='35' r='0.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+        
+        {/* Enhanced shadow and depth */}
+        <div className="absolute inset-0 shadow-[0_4px_20px_rgba(0,0,0,0.06),0_1px_4px_rgba(0,0,0,0.04)]"></div>
+        
+        {/* Inner highlight for glass effect */}
+        <div className="absolute inset-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(0,0,0,0.02)]"></div>
+        
+        {/* Bottom border with gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/60 to-transparent"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
            {/* Logo and title */}
            <div className="flex items-center space-x-2 sm:space-x-4 flex-1 min-w-0">
              <div className="flex-shrink-0">
@@ -60,29 +77,41 @@ function App() {
            <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
             <button
               onClick={() => setIsTipModalOpen(true)}
-              className="p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+              className="relative p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 rounded-xl transition-all duration-300 transform-gpu hover:scale-105 active:scale-95 group overflow-hidden"
               title={t('tipButton')}
             >
-              <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+              {/* Button background with glassmorphism */}
+              <div className="absolute inset-0 bg-white/40 group-hover:bg-blue-50/60 rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[0_2px_8px_rgba(0,0,0,0.04)] group-hover:shadow-[0_4px_12px_rgba(59,130,246,0.15)] rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] rounded-xl"></div>
+              <HelpCircle className="relative h-4 w-4 sm:h-5 sm:w-5 drop-shadow-sm" />
             </button>
             <a
               href="https://github.com/iamshaynez/todoist-countdown"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+              className="relative p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 rounded-xl transition-all duration-300 transform-gpu hover:scale-105 active:scale-95 group overflow-hidden"
               title="GitHub Repository"
             >
-              <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 24 24">
+              {/* Button background with glassmorphism */}
+              <div className="absolute inset-0 bg-white/40 group-hover:bg-blue-50/60 rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[0_2px_8px_rgba(0,0,0,0.04)] group-hover:shadow-[0_4px_12px_rgba(59,130,246,0.15)] rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] rounded-xl"></div>
+              <svg className="relative h-4 w-4 sm:h-5 sm:w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
 
             <button
               onClick={toggleSidebar}
-              className="p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+              className="relative p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 rounded-xl transition-all duration-300 transform-gpu hover:scale-105 active:scale-95 group overflow-hidden"
               title={t('settings')}
             >
-              <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
+              {/* Button background with glassmorphism */}
+              <div className="absolute inset-0 bg-white/40 group-hover:bg-blue-50/60 rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[0_2px_8px_rgba(0,0,0,0.04)] group-hover:shadow-[0_4px_12px_rgba(59,130,246,0.15)] rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] rounded-xl"></div>
+              <Settings className="relative h-4 w-4 sm:h-5 sm:w-5 drop-shadow-sm" />
             </button>
           </div>
         </div>
@@ -114,10 +143,14 @@ function App() {
               </p>
               <button
                 onClick={toggleSidebar}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 text-white rounded-xl hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 transition-all duration-300 transform-gpu hover:scale-105 active:scale-95 group overflow-hidden shadow-[0_4px_15px_rgba(59,130,246,0.3)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.4)]"
               >
-                <Settings className="w-4 h-4" />
-                {t('configureApiKey')}
+                {/* Enhanced gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                {/* Light reflection */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                <Settings className="relative w-4 h-4 drop-shadow-sm" />
+                <span className="relative drop-shadow-sm">{t('configureApiKey')}</span>
               </button>
             </div>
           </div>
@@ -137,10 +170,14 @@ function App() {
               <button
                 onClick={handleRefresh}
                 disabled={isLoading}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+                className="relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 text-white rounded-xl hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 transition-all duration-300 transform-gpu hover:scale-105 active:scale-95 group overflow-hidden shadow-[0_4px_15px_rgba(59,130,246,0.3)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.4)] disabled:opacity-50 disabled:hover:scale-100"
               >
-                <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
-                {t('refreshTasks')}
+                {/* Enhanced gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                {/* Light reflection */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                <RefreshCw className={`relative w-4 h-4 drop-shadow-sm ${isLoading ? 'animate-spin' : ''}`} />
+                <span className="relative drop-shadow-sm">{t('refreshTasks')}</span>
               </button>
             </div>
           </div>
