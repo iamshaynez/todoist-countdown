@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://todoist.day/sitemap.xml
+
+# Optimize crawl budget
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
