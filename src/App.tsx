@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Settings, RefreshCw, Calendar, AlertCircle, HelpCircle } from 'lucide-react';
+import { Settings, RefreshCw, Calendar, AlertCircle, HelpCircle, Github } from 'lucide-react';
 import { useAppStore } from './store/useAppStore';
 import { CountdownCard } from './components/CountdownCard';
 import { Sidebar } from './components/Sidebar';
@@ -77,6 +77,16 @@ function App() {
               >
                 <HelpCircle className="w-4 h-4" />
                 <span className="hidden sm:inline">{t('tipButton')}</span>
+              </button>
+
+              {/* GitHub button */}
+              <button
+                onClick={() => window.open('https://github.com/iamshaynez/todoist-countdown', '_blank', 'noopener,noreferrer')}
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                title="GitHub Repository"
+              >
+                <Github className="w-4 h-4" />
+                <span className="hidden sm:inline">GitHub</span>
               </button>
 
               {/* Settings button */}
