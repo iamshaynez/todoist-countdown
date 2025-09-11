@@ -205,18 +205,40 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <footer className="relative mt-auto overflow-hidden">
+        {/* Enhanced background with gradient and glassmorphism */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-purple-50/85 backdrop-blur-xl"></div>
+        
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.3'%3E%3Ccircle cx='5' cy='5' r='0.5'/%3E%3Ccircle cx='15' cy='5' r='0.5'/%3E%3Ccircle cx='25' cy='5' r='0.5'/%3E%3Ccircle cx='35' cy='5' r='0.5'/%3E%3Ccircle cx='5' cy='15' r='0.5'/%3E%3Ccircle cx='15' cy='15' r='0.5'/%3E%3Ccircle cx='25' cy='15' r='0.5'/%3E%3Ccircle cx='35' cy='15' r='0.5'/%3E%3Ccircle cx='5' cy='25' r='0.5'/%3E%3Ccircle cx='15' cy='25' r='0.5'/%3E%3Ccircle cx='25' cy='25' r='0.5'/%3E%3Ccircle cx='35' cy='25' r='0.5'/%3E%3Ccircle cx='5' cy='35' r='0.5'/%3E%3Ccircle cx='15' cy='35' r='0.5'/%3E%3Ccircle cx='25' cy='35' r='0.5'/%3E%3Ccircle cx='35' cy='35' r='0.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+        
+        {/* Enhanced shadow and depth */}
+        <div className="absolute inset-0 shadow-[0_-4px_20px_rgba(0,0,0,0.06),0_-1px_4px_rgba(0,0,0,0.04)]"></div>
+        
+        {/* Inner highlight for glass effect */}
+        <div className="absolute inset-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(0,0,0,0.02)]"></div>
+        
+        {/* Top border with gradient */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/60 to-transparent"></div>
+        
+        {/* Subtle light effect */}
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-white/20 rounded-full blur-xl"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-700 drop-shadow-sm">
               Thanks to the best GTD tool{' '}
               <a
                 href="https://todoist.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium underline transition-colors"
+                className="relative text-blue-600 hover:text-blue-700 font-medium transition-all duration-300 group"
               >
-                Todoist
+                {/* Link background effect */}
+                <span className="absolute inset-0 -mx-1 -my-0.5 bg-blue-50/60 group-hover:bg-blue-100/80 rounded-md transition-all duration-300 opacity-0 group-hover:opacity-100"></span>
+                <span className="relative drop-shadow-sm">Todoist</span>
               </a>
             </p>
           </div>
