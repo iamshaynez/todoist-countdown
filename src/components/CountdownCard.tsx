@@ -119,23 +119,25 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
   };
 
   return (
-    <div className="relative group rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 cursor-pointer overflow-hidden"
+    <div className="relative group rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.15)] transition-all duration-300 ease-out hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100/50 backdrop-blur-sm"
          onClick={onEdit}>
       
       {/* Header with title - color depends on card type */}
-      <div className={`${headerColor} text-white px-4 py-3 h-16 flex items-center justify-center`}>
-        <div className="text-sm font-medium text-center leading-tight">
+      <div className={`${headerColor} text-white px-4 py-3 h-16 flex items-center justify-center relative overflow-hidden`}>
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+        <div className="text-sm font-medium text-center leading-tight relative z-10 drop-shadow-sm">
           {title}
         </div>
       </div>
 
       {/* White main body */}
-      <div className="px-6 py-8">
+      <div className="px-6 py-8 relative bg-gradient-to-b from-white to-gray-50/30">
         {/* Large number display - black text, clickable */}
         <div className="text-center mb-6">
           <div 
-            className={`font-bold mb-2 cursor-pointer hover:opacity-80 transition-opacity ${
-              hasDateError ? 'text-red-500 text-2xl' : `text-black ${getFontSize()}`
+            className={`font-bold mb-2 cursor-pointer hover:opacity-80 transition-all duration-200 hover:scale-105 ${
+              hasDateError ? 'text-red-500 text-2xl drop-shadow-sm' : `text-black ${getFontSize()} drop-shadow-sm`
             }`}
             onClick={handleNumberClick}
           >
@@ -145,9 +147,9 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
       </div>
 
       {/* Bottom date - gray text, centered, fixed margin from bottom */}
-      <div className="px-4 pb-4 text-center">
-        <div className={`text-sm ${
-          hasDateError ? 'text-red-500' : 'text-gray-500'
+      <div className="px-4 pb-4 text-center relative">
+        <div className={`text-sm font-medium ${
+          hasDateError ? 'text-red-500' : 'text-gray-600'
         }`}>
           {getBottomText()}
         </div>
@@ -156,11 +158,16 @@ export const CountdownCard: React.FC<CountdownCardProps> = ({ card, onEdit, onDe
       {/* Status indicator - positioned on header */}
       {isOverdue && type === 'countdown' && (
         <div className="absolute top-2 left-4 z-20">
-          <div className="bg-red-500 text-white px-2 py-1 rounded text-xs font-medium">
+          <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-xs font-medium shadow-lg border border-red-400/20">
             {t('overdue')}
           </div>
         </div>
       )}
+      
+      {/* Subtle inner glow effect on hover */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/20"></div>
+      </div>
     </div>
   );
 };
