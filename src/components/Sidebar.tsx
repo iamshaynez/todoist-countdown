@@ -29,6 +29,21 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     setInputValue(apiKey);
   }, [apiKey]);
   
+  // Prevent background scrolling when sidebar is open
+  useEffect(() => {
+    if (isOpen) {
+      // Store original overflow value
+      const originalOverflow = document.body.style.overflow;
+      // Prevent background scrolling
+      document.body.style.overflow = 'hidden';
+      
+      // Cleanup function to restore original overflow
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isOpen]);
+  
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
